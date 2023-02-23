@@ -19,7 +19,7 @@ Vt=volT(time,maxVt,a,V0); %tumour vol ml
 Nt=volT(time,maxNt,a,N0); %number of tumour cells
 
 vn0=0.5;% volume of onset of necoris ml (2cm^3);
-nn0=2*pt; %number of tumour cells at onset of necrosis 
+nn0=vn0*pt; %number of tumour cells at onset of necrosis 
 [minValue,closestIndex]=min(abs(Vt-vn0));
 tn0=time(closestIndex); %time onset necrosis
 
